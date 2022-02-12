@@ -1,1 +1,1 @@
-/usr/bin/sudo dockcross-armv7-rpi bash -c '$CC hello.c -o bin/hello_arm'
+dockcross-armv7-rpi bash -c '$CC hello.c -o bin/hello_arm'
