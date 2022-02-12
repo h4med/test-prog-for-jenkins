@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage{'Build'}{
+        stage('Build'){
             steps {
 		sh 'echo "Building..."'
 		sh 'chmod +x scripts/dockcross-build.sh'
