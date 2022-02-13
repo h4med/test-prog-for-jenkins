@@ -17,8 +17,8 @@ pipeline {
 	}
         stage('Test'){
             steps{
-                sh 'ssh pi@192.168.1.120 "chmod +x /home/pi/deploy/bin"'
-                sh 'ssh pi@192.168.1.120 "/home/pi/deploy/bin"'
+                sh 'ssh pi@192.168.1.120 "chmod +x /home/pi/deploy/bin/hello_arm"'
+                sh 'ssh pi@192.168.1.120 "/home/pi/deploy/bin/hello_arm"'
             }
         }
     }
