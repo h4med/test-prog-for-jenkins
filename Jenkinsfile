@@ -6,12 +6,13 @@ pipeline {
 		sh 'echo "Building..."'
 		sh 'chmod +x scripts/dockcross-build.sh'
 		sh 'scripts/dockcross-build.sh'
-		archiveArtifacts artifacts: 'bin/*', fingerprint: true
+//		archiveArtifacts artifacts: 'bin/*', fingerprint: true
 	    }
 	}
-	stage('Test'){
+	stage('Deploy'){
 	    steps {
-	        sh 'echo "dummy Running..."'
+	        sh 'echo "Transfer file to Ppi..."'
+                sh 'scp bin/hello_arm pi@192.168.1.120:/home/pi/deploy/bin'
 	   }    
 	}
     }
