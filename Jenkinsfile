@@ -15,5 +15,11 @@ pipeline {
                 sh 'scp bin/hello_arm pi@192.168.1.120:/home/pi/deploy/bin'
 	   }    
 	}
+        Stage('Test'){
+            steps{
+                sh 'ssh pi@192.168.1.120 "chmod +x /home/pi/deploy/bin"'
+                sh 'ssh pi@192.168.1.120 "/home/pi/deploy/bin"'
+            }
+        }
     }
 }
