@@ -6,7 +6,6 @@ pipeline {
 		sh 'echo "Building..."'
 		sh 'chmod +x scripts/dockcross-build.sh'
 		sh 'sudo scripts/dockcross-build.sh'
-//		archiveArtifacts artifacts: 'bin/*', fingerprint: true
 	    }
 	}
 	stage('Deploy'){
